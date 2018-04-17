@@ -13,7 +13,7 @@ div#memory_board {
 
 /* ----create a div that targets all child divs---*/
 div#memory_board > div{
-    //background: url(title_bg.jpg) no-repeat;
+    background: url(title_bg.jpg) no-repeat;
     border: #000 1px; solid;
     width: 71px;
     height: 71px;
@@ -29,6 +29,23 @@ div#memory_board > div{
 
 </style>
 <script>
+/* -- the content in the cards -- */
+var memory_array = ['IS', 'IT', 'AWAY', 'AND', 'WE', 'CAN', 'ME', 'MY', 'YOU', 'I', 'TO', 'FOR', 'A', 'WHERE', 'BIG', 'LITTLE', 'RUN', 'FIND', 'SHE'];
+var memory_array2 = ['WILL', 'HELP', 'SAID', 'NOW', 'NOT', 'AS', 'CAME', 'FROM', 'GIVE', 'GO', 'COME', 'OUT', 'IN', 'THERE', 'HERE', 'TWO', 'ONE', 'RED', 'THREE'];
+var memory_array3 = ['PLAY', 'JUMP', 'BLUE', 'YELLOW', 'GET', 'FACE', 'THE', 'OF', 'DOWN', 'UP', 'SEE', 'LOOK', 'FUNNY', 'MAKE'];
+var memory_values = [];
+var memory_tile_ids = [];
+var tiles flipped = 0;
+/* -- add shuffle method-- */
+Array.prototype.memory_title_shuffle = function(){
+    var i = this.length, j, temp;
+    while(--i >0) {
+        j = Math.floor(Math.random() * (i+1));
+        temp = this[j];
+        this[j] = this[i];
+        this[i] = temp;
+    }
+}
 
 </script>
 </head>
